@@ -61,30 +61,23 @@ public class Controladorlogin {
         HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
         session.setAttribute("user", validarUsuario);
             if(validarUsuario == null){
-                FacesMessage mensaje = new FacesMessage("Datos Invalidos");
-                mensaje.setSeverity(FacesMessage.SEVERITY_INFO);
-                FacesContext.getCurrentInstance().addMessage(null,mensaje );
-                System.out.println("Datos Invalidos ");
+               
                 return "";
             }
             else{
                 String nombreRol = control.consultarRol(this.usuario);
                 String retorno = "";
-                FacesMessage mensaje = new FacesMessage("Datos validos");
-                mensaje.setSeverity(FacesMessage.SEVERITY_INFO);
-                FacesContext.getCurrentInstance().addMessage(null,mensaje );
                 System.out.println("Usario Valido puedes ingresar ");
-                
                 if(nombreRol!= null && nombreRol.equals("Administrador")){
-                    retorno = "CrudCampeonato";
+                    retorno = "rolAdministradorIni";
                 }
                 
                 if(nombreRol!= null && nombreRol.equals("Entrenador")){
-                    retorno = "EquiposEntrenador";
+                    retorno = "rolEntrenadorIni";
                 }
                 
                 if(nombreRol!= null && nombreRol.equals("Jugador")){
-                    retorno = "index";
+                    retorno = "rolJugadorIni";
                 }
                 
                 return retorno;

@@ -37,13 +37,19 @@ public class ControladorCampeonato {
     private List<BeanCampeonato> consCamp;
     private BeanUsuariosLogin usuario;
     
-
+    private boolean x=false;
+    
     public String respuesta = "";
     public String emviarPerfil()  {
         if (true) {
             respuesta = "/perfil.xhtml";
         }
         return respuesta;
+    }
+    
+    public String activar(){
+        x=true;
+    return "/Pantallas/rolAdministradorIni.xhtml";
     }
     
     public String registrarCampeonato() {
@@ -129,6 +135,14 @@ public class ControladorCampeonato {
 
     public void setUsuario(BeanUsuariosLogin usuario) {
         this.usuario = usuario;
+    }
+
+    public boolean isX() {
+        return x;
+    }
+
+    public void setX(boolean x) {
+        this.x = x;
     }
 
 }

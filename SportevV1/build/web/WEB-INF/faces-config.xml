@@ -6,13 +6,23 @@
 
     <navigation-rule>
         <navigation-case>
-		<from-outcome>rolAdmin</from-outcome>
-		<to-view-id>/pantallaPrincipal/rolAdministrador.xhtml</to-view-id>
+		<from-outcome>rolAdministradorIni</from-outcome>
+		<to-view-id>/Pantallas/rolAdministradorIni.xhtml</to-view-id>
 	</navigation-case>
         <navigation-case>
-            <from-outcome>rolCliente</from-outcome>
-		<to-view-id>/pantallaPrincipal/rolCliente.xhtml</to-view-id>
-        </navigation-case>
+		<from-outcome>rolEntrenadorIni</from-outcome>
+		<to-view-id>/Pantallas/rolEntrenadorIni.xhtml</to-view-id>
+	</navigation-case>
+        <navigation-case>
+		<from-outcome>rolJugadorIni</from-outcome>
+		<to-view-id>/Pantallas/rolJugadorIni.xhtml</to-view-id>
+	</navigation-case>
+        <!--
+        <navigation-case>
+		<from-outcome>/Pantallas/rolAdministradorIni.xhtml</from-outcome>
+		<to-view-id>/Pantallas/rolAdministradorIni.xhtml</to-view-id>
+	</navigation-case>
+        -->
     </navigation-rule>
 
 
